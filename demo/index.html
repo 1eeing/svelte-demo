@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <svelte-demo></svelte-demo>
+    </div>
+
+    <script type="module">
+      import App from './index.esm.js';
+
+      console.log('App: ', App);
+
+      // 1、此为不是 customElement 的写法
+      // const main = document.getElementById('main');
+      // const app = new App({
+      //   target: main,
+      // });
+
+      // 2、此为是 customElement 的写法
+      // const main = document.getElementById('main');
+      // const app = new App();
+      // main.appendChild(app);
+
+      // console.log('app: ', app);
+
+      // 3、直接插入 customElement
+    </script>
+  </body>
+</html>
